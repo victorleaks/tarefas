@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uso Do For</title>
+</head>
+<body>
+    <hr>
+    <h1>Nomes em Ordem Alfabética</h1>
+    <ul id="nomes-lista"></ul>
+    <hr>
+    <script>
+        
+        var nomes = ["Enzo", "Victor", "Gregorio", "Julia", "Nathielly"];
+
+        
+        function ordenarNomes() {
+            nomes.sort(); 
+        }
+
+        ordenarNomes();
+
+        var nomesLista = document.getElementById("nomes-lista");
+        for (var i = 0; i < nomes.length; i++) {
+            var li = document.createElement("li");
+            li.textContent = nomes[i];
+            nomesLista.appendChild(li);
+        }
+    </script>
+</body>
+</html>
