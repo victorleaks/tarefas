@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personalizar Mensagem de Erro</title>
+</head>
+<body>
+    <h1>Exemplo de Personalização de Mensagem de Erro</h1>
+
+    <script>
+        try {
+            // Simulando uma operação de busca no banco de dados que falha
+            var resultadoDaBusca = null;
+
+            if (!resultadoDaBusca) {
+                throw new Error("A busca não retornou resultados. Tente novamente mais tarde.");
+            }
+
+            // Processar o resultado da busca aqui (não será alcançado neste exemplo)
+        } catch (erro) {
+            // Capturar e personalizar a mensagem de erro
+            alert("Erro: " + erro.message);
+        }
+    </script>
+</body>
+</html>
