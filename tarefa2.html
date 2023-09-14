@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classificar Matriz em Ordem Decrescente</title>
+</head>
+<body>
+    <h1>Matriz em Ordem Decrescente</h1>
+    <hr>
+    <script>
+        
+        var numeros = [49, 13, 4, 88, 29, 1, 77];
+
+    
+        function classificarDecrescente(arr) {
+            var trocou;
+            do {
+                trocou = false;
+                for (var i = 0; i < arr.length - 1; i++) {
+                    if (arr[i] < arr[i + 1]) {
+                        var temp = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = temp;
+                        trocou = true;
+                    }
+                }
+            } while (trocou);
+        }
+
+        
+        classificarDecrescente(numeros);
+
+        
+        document.write("<p><h4>Matriz em ordem decrescente:</h4> " + numeros.join(", ") + "</p>");
+        
+    </script>
+    <hr>
+</body>
+</html>
