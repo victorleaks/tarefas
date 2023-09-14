@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>frutas</title>
+</head>
+<body>
+    <h1>Busca pelas frutas</h1>
+
+    <script>
+    
+        var frutas = ["maçã", "banana", "abacaxi", "laranja", "uva"];
+
+        var imagem = document.createElement("img");
+
+        imagem.src = "abacaxi.png";
+        
+        var palavraProcurada = "abacaxi";
+
+        
+        var resultado = "";
+
+        
+        switch (palavraProcurada) {
+            case "abacaxi":
+                if (frutas.includes(palavraProcurada)) {
+                    resultado = "Encontrou a palavra 'abacaxi' na matriz de frutas.";
+                } else {
+                    resultado = "A palavra 'abacaxi' não foi encontrada na matriz de frutas.";
+                }
+                break;
+
+            default:
+                resultado = "A palavra procurada não é 'abacaxi'.";
+                break;
+        }
+
+        
+        console.log(resultado);
+    </script>
+</body>
+</html>
